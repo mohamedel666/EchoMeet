@@ -1,0 +1,33 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Dark navy background circle -->
+  <circle cx="50" cy="50" r="48" fill="#1E1A3C"/>
+
+  <!-- Top-left bracket - Pink -->
+  <g>
+    <path d="M 28 18 L 18 18 Q 14 18 14 22 L 14 42" stroke="#E91E8C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="14" cy="44" r="4" fill="#E91E8C"/>
+  </g>
+
+  <!-- Top-right bracket - Teal -->
+  <g>
+    <path d="M 72 18 L 82 18 Q 86 18 86 22 L 86 42" stroke="#2DBFB8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="86" cy="44" r="4" fill="#2DBFB8"/>
+  </g>
+
+  <!-- Bottom-left bracket - Blue -->
+  <g>
+    <path d="M 28 82 L 18 82 Q 14 82 14 78 L 14 58" stroke="#2D7DD2" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="14" cy="56" r="4" fill="#2D7DD2"/>
+  </g>
+
+  <!-- Bottom-right bracket - Orange -->
+  <g>
+    <path d="M 72 82 L 82 82 Q 86 82 86 78 L 86 58" stroke="#F47C2B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="86" cy="56" r="4" fill="#F47C2B"/>
+  </g>
+
+  <!-- Center dot cluster -->
+  <circle cx="50" cy="50" r="5" fill="white" opacity="0.9"/>
+  <circle cx="38" cy="50" r="3" fill="white" opacity="0.5"/>
+  <circle cx="62" cy="50" r="3" fill="white" opacity="0.5"/>
+</svg>

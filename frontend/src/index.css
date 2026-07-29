@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1E1A3C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Dark mode global styles */
+  html.dark body {
+    background-color: #0F111A; /* Very dark blue matching the screenshot */
+    color: #F8FAFC;
+  }
+
+  #root { min-height: 100vh; }
+}
+
+@layer components {
+  /* Primary CTA — blue solid */
+  .btn-cta {
+    @apply bg-[#2563EB] text-white font-semibold px-6 py-3 rounded-xl
+           shadow-md hover:bg-[#1d4ed8] active:scale-95 transition-all duration-200
+           cursor-pointer select-none;
+  }
+
+  /* Ghost outline */
+  .btn-outline {
+    @apply border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium px-6 py-3 rounded-xl
+           hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 cursor-pointer select-none bg-white dark:bg-transparent;
+  }
+
+  /* Light/Dark card */
+  .light-card {
+    @apply bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-2xl shadow-sm dark:shadow-none
+           hover:shadow-xl dark:hover:shadow-lg dark:hover:bg-white/10 hover:-translate-y-1 transition-all duration-300;
+  }
+
+  /* Dark glass card (used in Meeting room) */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  /* Feature icon bg */
+  .icon-wrap {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center
+           bg-blue-50 dark:bg-blue-500/10 text-[#2563EB] dark:text-blue-400 mb-5;
+  }
+}
+
+@layer utilities {
+  /* Brand gradient text (pink→orange) — kept for dark screens */
+  .text-gradient {
+    background: linear-gradient(to right, #E91E8C, #F47C2B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Blue text gradient for hero */
+  .text-gradient-blue {
+    background: linear-gradient(to right, #2563EB, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-blue  { box-shadow: 0 0 40px rgba(37,99,235,0.25); }
+  .glow-pink  { box-shadow: 0 0 40px rgba(233,30,140,0.3); }
+  .glow-teal  { box-shadow: 0 0 40px rgba(45,191,184,0.3); }
+}
+
+/* Daily.co iframe */
+#daily-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-slate-100 dark:bg-slate-900; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-slate-700 rounded; }
+::-webkit-scrollbar-thumb:hover { @apply bg-slate-400 dark:bg-slate-600; }
+
+/* Modal animation */
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.92) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
